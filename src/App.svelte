@@ -1,4 +1,8 @@
 <script lang="ts">
+  import Fa from 'svelte-fa'
+  import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
+  import { faHome } from '@fortawesome/free-solid-svg-icons'
+
   import { Input, Switch, Progress } from 'spaper';
 	export let pageNum = localStorage.getItem("pageNum");
 	export let maxPageNum = localStorage.getItem("maxPageNum");
@@ -46,26 +50,28 @@
     </div>
     {/if}
   </div>
+  <br><br>
+  <div class="topMargin">
+    <button onclick="location.href='https://kevinkivi.com'"><Fa icon={faHome} /></button>
+    <button onclick="location.href='https://github.com/nake89/wpaio'"><Fa icon={faGithub} /></button>
+    <button onclick="location.href='https://twitter.com/nake89'"><Fa icon={faTwitter} /></button>
+  </div>
 </main>
 
 <style>
+  .topMargin {
+    margin-top: 20px;
+  }
 	main {
 		text-align: center;
 		padding: 1em;
-		/* max-width: 240px; */
 		margin: 0 auto;
 	}
 
 	h1 {
 		color: #ff3e00;
-		/* text-transform: uppercase; */
 		font-size: 4em;
 		font-weight: 100;
 	}
 
-	@media (min-width: 640px) {
-		main {
-			/* max-width: none; */
-		}
-	}
 </style>
