@@ -1,9 +1,14 @@
 <script lang="ts">
   import Fa from 'svelte-fa'
+  import Login from "./Login.svelte"
   import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
   import { faHome } from '@fortawesome/free-solid-svg-icons'
-
   import { Input, Switch, Progress } from 'spaper';
+  import { store } from './auth'
+  function logout() {
+    $store = null
+  }
+
 	export let pageNum = localStorage.getItem("pageNum");
 	export let maxPageNum = localStorage.getItem("maxPageNum");
   function changePageNum() {
@@ -56,6 +61,11 @@
     <button onclick="location.href='https://github.com/nake89/wpaio'"><Fa icon={faGithub} /></button>
     <button onclick="location.href='https://twitter.com/nake89'"><Fa icon={faTwitter} /></button>
   </div>
+  	{#if $store != null}
+      <div></div>
+  	{:else}
+  		<Login />
+  	{/if}
 </main>
 
 <style>

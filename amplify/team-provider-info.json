@@ -1,0 +1,20 @@
+{
+  "prod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-wpaio-prod-212440-authRole",
+      "UnauthRoleArn": "arn:aws:iam::289298663714:role/amplify-wpaio-prod-212440-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::289298663714:role/amplify-wpaio-prod-212440-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-wpaio-prod-212440-deployment",
+      "UnauthRoleName": "amplify-wpaio-prod-212440-unauthRole",
+      "StackName": "amplify-wpaio-prod-212440",
+      "StackId": "arn:aws:cloudformation:eu-north-1:289298663714:stack/amplify-wpaio-prod-212440/050fc6e0-47dc-11ec-9590-0ecf27d10498",
+      "AmplifyAppId": "d3dykd0u10g5b3"
+    },
+    "categories": {
+      "auth": {
+        "wpaio3c974a85": {}
+      }
+    }
+  }
+}
